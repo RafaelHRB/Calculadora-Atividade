@@ -9,6 +9,7 @@ import calculadoraci.service.CalculadoraService;
 @RestController
 public final class CalculadoraController {
 
+    // Instância do serviço de calculadora
     private final CalculadoraService service;
 
     public CalculadoraController(final CalculadoraService service) {

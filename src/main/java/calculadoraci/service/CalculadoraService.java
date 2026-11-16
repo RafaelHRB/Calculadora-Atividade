@@ -3,7 +3,7 @@ package calculadoraci.service;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CalculadoraService {
+public final class CalculadoraService {
 
     // Realiza a soma de dois números
     public int somar(final int a, final int b) {

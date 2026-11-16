@@ -1,4 +1,4 @@
-package calculadora_ci;
+package calculadoraci;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
