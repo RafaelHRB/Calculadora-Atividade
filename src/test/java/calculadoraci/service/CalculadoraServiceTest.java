@@ -1,4 +1,3 @@
-// Pacote que contém o serviço
 package calculadoraci.service;
 
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,3 @@
-// Pacote que contém os controladores
 package calculadoraci.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,37 +23,56 @@ public final class CalculadoraController {
     }
     /**
      * Endpoint para somar dois números.
+     *
+     * @param a primeiro número
+     * @param b segundo número
+     * @return a soma dos números
      */
     @GetMapping("/somar")
-    public int somar(@RequestParam int a,
-                     @RequestParam int b) {
+    public int somar(@RequestParam final int a,
+                     @RequestParam final int b) {
 
         return calculadoraService.somar(a, b);
     }
+
     /**
      * Endpoint para subtrair dois números.
+     *
+     * @param a primeiro número
+     * @param b segundo número
+     * @return a subtração dos números
      */
     @GetMapping("/subtrair")
-    public int subtrair(@RequestParam int a,
-                        @RequestParam int b) {
+    public int subtrair(@RequestParam final int a,
+                        @RequestParam final int b) {
 
         return calculadoraService.subtrair(a, b);
     }
+
     /**
      * Endpoint para multiplicar dois números.
+     *
+     * @param a primeiro número
+     * @param b segundo número
+     * @return a multiplicação dos números
      */
     @GetMapping("/multiplicar")
-    public int multiplicar(@RequestParam int a,
-                           @RequestParam int b) {
+    public int multiplicar(@RequestParam final int a,
+                           @RequestParam final int b) {
 
         return calculadoraService.multiplicar(a, b);
     }
+
     /**
      * Endpoint para dividir dois números.
+     *
+     * @param a dividendo
+     * @param b divisor
+     * @return o resultado da divisão
      */
     @GetMapping("/dividir")
-    public int dividir(@RequestParam int a,
-                       @RequestParam int b) {
+    public int dividir(@RequestParam final int a,
+                       @RequestParam final int b) {
 
         return calculadoraService.dividir(a, b);
     }
