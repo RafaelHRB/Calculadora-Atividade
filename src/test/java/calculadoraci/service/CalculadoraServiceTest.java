@@ -1,8 +1,7 @@
+// Pacote que contém o serviço
 package calculadoraci.service;
 
 import org.junit.jupiter.api.Test;
-
-import calculadoraci.service.CalculadoraService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -70,10 +69,11 @@ class CalculadoraServiceTest {
 
     @Test
     void naoPermiteDivisaoPorZero() {
-
+        final int valorA = 5;
+        final int valorB = 0;
         assertThrows(
                 IllegalArgumentException.class,
-                () -> service.dividir(5, 0)
+                () -> service.dividir(valorA, valorB)
         );
 
     }

@@ -1,3 +1,4 @@
+// Pacote que contém os controladores
 package calculadoraci.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,38 +11,38 @@ import calculadoraci.service.CalculadoraService;
 public final class CalculadoraController {
 
     // Instância do serviço de calculadora
-    private final CalculadoraService service;
+    private final CalculadoraService calculadoraService;
 
-    public CalculadoraController(final CalculadoraService service) {
-        this.service = service;
+    public CalculadoraController(final CalculadoraService calculadoraService) {
+        this.calculadoraService = calculadoraService;
     }
 
     @GetMapping("/somar")
     public int somar(@RequestParam int a,
                      @RequestParam int b) {
 
-        return service.somar(a, b);
+        return calculadoraService.somar(a, b);
     }
 
     @GetMapping("/subtrair")
     public int subtrair(@RequestParam int a,
                         @RequestParam int b) {
 
-        return service.subtrair(a, b);
+        return calculadoraService.subtrair(a, b);
     }
 
     @GetMapping("/multiplicar")
     public int multiplicar(@RequestParam int a,
                            @RequestParam int b) {
 
-        return service.multiplicar(a, b);
+        return calculadoraService.multiplicar(a, b);
     }
 
     @GetMapping("/dividir")
     public int dividir(@RequestParam int a,
                        @RequestParam int b) {
 
-        return service.dividir(a, b);
+        return calculadoraService.dividir(a, b);
     }
 
 }
