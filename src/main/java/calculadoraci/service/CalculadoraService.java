@@ -2,26 +2,36 @@
 package calculadoraci.service;
 
 import org.springframework.stereotype.Service;
-
+/**
+ * Serviço que contém a lógica de negócios da calculadora.
+ */
 @Service
 public final class CalculadoraService {
 
-    // Realiza a soma de dois números
+    /**
+     * Realiza a soma de dois números.
+     */
     public int somar(final int a, final int b) {
         return a + b;
     }
 
-    // Realiza a subtração de dois números
+    /**
+     * Realiza a subtração de dois números.
+     */
     public int subtrair(final int a, final int b) {
         return a - b;
     }
 
-    // Realiza a multiplicação de dois números
+    /**
+     * Realiza a multiplicação de dois números.
+     */
     public int multiplicar(final int a, final int b) {
         return a * b;
     }
 
-    // Realiza a divisão de dois números
+    /**
+     * Realiza a divisão de dois números.
+     */
     public int dividir(final int a, final int b) {
 
         // Estabelece a condição de que não se pode dividr por zero

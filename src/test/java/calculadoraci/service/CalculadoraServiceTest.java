@@ -5,10 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
+/**
+ * Testes unitários do serviço de calculadora.
+ */
 class CalculadoraServiceTest {
-
-    // Instância do serviço de calculadora
+    /** Instância do serviço de calculadora para testes. */
     private final CalculadoraService service = new CalculadoraService();
 
     @Test
