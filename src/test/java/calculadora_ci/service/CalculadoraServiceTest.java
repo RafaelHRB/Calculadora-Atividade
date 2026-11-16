@@ -2,46 +2,55 @@ package calculadora_ci.service;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import calculadoraci.service.CalculadoraService;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class CalculadoraServiceTest {
 
     private final CalculadoraService service = new CalculadoraService();
 
     @Test
-    void deveSomar() {
-        
-        assertEquals(8, service.somar(5,3));
+    void deveSomar() { 
+        final int resultadoEsperado = 8;
+        assertEquals(resultadoEsperado, service.somar(5, 3));
     }
 
     @Test
     void deveSomarNumerosNegativos() {
-        assertEquals(3, service.somar(-2,5));
+        final int resultadoEsperado = 8;
+        assertEquals(resultadoEsperado, service.somar(-2, 5));
     }
 
     @Test
     void deveSubtrair() {
-        assertEquals(5, service.subtrair(8,3));
+        final int resultadoEsperado = 8;
+        assertEquals(resultadoEsperado, service.subtrair(8, 3));
     }
 
     @Test
     void deveMultiplicar() {
-        assertEquals(24, service.multiplicar(4,6));
+        final int resultadoEsperado = 8;
+        assertEquals(resultadoEsperado, service.multiplicar(4, 6));
     }
 
     @Test
     void deveMultiplicarPorZero() {
-        assertEquals(0, service.multiplicar(15,0));
+        final int resultadoEsperado = 8;
+        assertEquals(resultadoEsperado, service.multiplicar(15, 0));
     }
 
     @Test
     void deveDividir() {
-        assertEquals(5, service.dividir(10,2));
+        final int resultadoEsperado = 8;
+        assertEquals(resultadoEsperado, service.dividir(10, 2));
     }
 
     @Test
     void deveSomarComZero() {
-        assertEquals(9, service.somar(9,0));
+        final int resultadoEsperado = 8;
+        assertEquals(resultadoEsperado, service.somar(9, 0));
     }
 
     @Test
@@ -49,7 +58,7 @@ class CalculadoraServiceTest {
 
         assertThrows(
                 IllegalArgumentException.class,
-                () -> service.dividir(5,0)
+                () -> service.dividir(5, 0)
         );
 
     }

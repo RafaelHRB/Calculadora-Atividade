@@ -1,16 +1,17 @@
-package calculadora_ci.controller;
+package calculadoraci.controller;
 
-import calculadora_ci.service.CalculadoraService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import calculadoraci.service.CalculadoraService;
+
 @RestController
-public class CalculadoraController {
+public final class CalculadoraController {
 
     private final CalculadoraService service;
 
-    public CalculadoraController(CalculadoraService service) {
+    public CalculadoraController(final CalculadoraService service) {
         this.service = service;
     }
 
